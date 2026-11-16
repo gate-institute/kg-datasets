@@ -1,7 +1,7 @@
 """Paths for the KG-DSE scripts. Works in two layouts:
 - project layout: scripts in 'Resource Website and KG/05_scripts', sources in 'Master Table/master.json'
   and 'Dataset Registry/registry.json', outputs in 01_model, 02_data, 03_sparql;
-- repository layout (github.com/BeefaceData/kgdse): scripts in 'scripts', sources in 'data/json',
+- repository layout (github.com/gate-institute/kg-datasets): scripts in 'scripts', sources in 'data/json',
   outputs in model, data, queries."""
 import os
 HERE = os.path.dirname(os.path.abspath(__file__)); TOP = os.path.dirname(HERE)

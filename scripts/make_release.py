@@ -1,4 +1,4 @@
-"""Assemble the public repository folder 06_publication/kgdse/ (github.com/BeefaceData/kgdse).
+"""Assemble the public repository folder 06_publication/kgdse/ (github.com/gate-institute/kg-datasets).
 Copies only: RDF graph, vocabulary, shapes, competency questions and queries, scripts, the two JSON build
 inputs, CSV exports; writes datasets.csv (registry with descriptors and samples), README.md, CITATION.cff,
 LICENSE (CC BY 4.0, data) and LICENSE-CODE (MIT). No PDFs, full texts, drafts or ResearchRabbit export."""
@@ -74,7 +74,7 @@ title: "KG-DSE: a traceable evidence graph of dataset use in knowledge graph res
 version: 0.1.0
 date-released: {datetime.date.today().isoformat()}
 license: CC-BY-4.0
-repository-code: "https://github.com/BeefaceData/kgdse"
+repository-code: "https://github.com/gate-institute/kg-datasets"
 url: "https://w3id.org/kgdse"
 authors:
   - family-names: Godwin
@@ -90,7 +90,7 @@ A traceable evidence graph that links knowledge graph (KG) research categories, 
 datasets used for them, and every link to its location in the published literature. It was built through a
 systematic mapping study (Kitchenham and Charters guidelines; PRISMA 2020 reporting).
 
-**Browse:** https://beefacedata.github.io/kgdse/ (datasets, taxonomy, every record with its evidence location).
+**Browse:** https://gate-institute.github.io/kg-datasets/ (datasets, taxonomy, every record with its evidence location).
 
 **Status:** version 0.1.0 (pre-release, 14 Nov 2026). Persistent identifier https://w3id.org/kgdse (being registered); DOI to follow (Zenodo).
 

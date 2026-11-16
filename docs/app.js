@@ -1,8 +1,8 @@
 /* KG-DSE static site. Routes mirror the resource URIs (https://w3id.org/kgdse/<kind>/<id>):
    #dataset/KGD-0001  #record/B01-R001  #subtask/CMP-01  #category/<slug>  #report/<key>  #datasets  #taxonomy  #data */
 'use strict';
-const GH = 'https://github.com/BeefaceData/kgdse';
-const RAW = 'https://raw.githubusercontent.com/BeefaceData/kgdse/main/';
+const GH = 'https://github.com/gate-institute/kg-datasets';
+const RAW = 'https://raw.githubusercontent.com/gate-institute/kg-datasets/main/';
 const LABEL = { resource_kind: 'Resource kind', introducing_source: 'Introducing source', derived_from: 'Derived from', input_unit: 'Input unit',
   input_type: 'Input type', output_unit: 'Output unit', output_type: 'Output type', input_source: 'Input source', target_source: 'Target source',
   creation_method: 'Creation method', human_verification: 'Human verification', size: 'Size', access_status: 'Access status', licence: 'Licence' };

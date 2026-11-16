@@ -4,7 +4,7 @@ A traceable evidence graph that links knowledge graph (KG) research categories, 
 datasets used for them, and every link to its location in the published literature. It was built through a
 systematic mapping study (Kitchenham and Charters guidelines; PRISMA 2020 reporting).
 
-**Browse:** https://beefacedata.github.io/kgdse/ (datasets, taxonomy, every record with its evidence location).
+**Browse:** https://gate-institute.github.io/kg-datasets/ (datasets, taxonomy, every record with its evidence location).
 
 **Status:** version 0.1.0 (pre-release, 14 Nov 2026). Persistent identifier https://w3id.org/kgdse (being registered); DOI to follow (Zenodo).
 
