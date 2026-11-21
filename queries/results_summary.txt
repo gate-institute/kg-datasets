@@ -14,14 +14,14 @@
    KG reasoning | Training | 20 | FB15k-237 (multimodal); FB15k-237 few-shot (FKGC split); FB15k-237 ind
    KG completion and link prediction | Analysis | 9 | FB15k-237 (multimodal); FB15k-237 few-shot (FKGC split); FB15k-237 ind
    KG completion and link prediction | Introduced | 4 | FB15k-237 (multimodal); FB15k-237 few-shot (FKGC split); FB15k-237 ind
-== CQ3: Which datasets have author-reported dataset limitations (DL), and how many records report one?
+== CQ3: Which datasets have author-reported dataset limitations (DL), and how many records report one? (DL is recorded per record: it is attributable to the dataset only when the record names that dataset alone; in grouped records it may concern another dataset of the record.)
    rows: 15
-   Wikidata | 51 | some targets not found in the KB (Table 2, p. 175).
-   FB15k-237 | 49 | KBAT original implementation leaked test triples; fixed (Table 2 note;
-   WN18RR | 39 | class imbalance means the ontological knowledge cannot constrain predi
-   DBpedia | 35 | (authors) systematic benchmarks scarce; studies use differing DBpedia 
-   Freebase | 28 | Freebase no longer maintained (RI); subset chosen for affordability (p
-   FB15k | 27 | test leakage flagged (Table 3, p. 13).
+   MetaQA | 7 | 6 | the same 15 path patterns occur in train and test, making few-shot pat
+   FB15k-237 | 6 | 43 | still contains Cartesian-product relations that inflate accuracy (Tabl
+   WN18RR | 6 | 33 | derived from FB15k/WN18 with inverse relations removed to prevent test
+   FB15k | 6 | 21 | ~70.3% of test triples have reverse triples in training; CVT concatena
+   Wikidata | 5 | 46 | some targets not found in the KB (Table 2, p. 175).
+   DBpedia | 5 | 30 | scores depend heavily on SPARQL endpoint availability; versions with a
 == CQ4: Which dataset uses do not report a version, per research category?
    rows: 15
    KG completion and link prediction | 343 | 399

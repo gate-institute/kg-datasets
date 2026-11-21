@@ -24,10 +24,12 @@ WHERE { ?r kd:recordStatus "active" ; kd:usesDataset <https://w3id.org/kgdse/dat
         ?c skos:prefLabel ?category . ?ro skos:prefLabel ?role .
         OPTIONAL { ?v kd:variantOf <https://w3id.org/kgdse/dataset/KGD-0001> ; rdfs:label ?variantLabel } }
 GROUP BY ?category ?role ORDER BY DESC(?studies)'''),
- 'cq3': ('Which datasets have author-reported dataset limitations (DL), and how many records report one?', '''
-SELECT ?dataset (COUNT(?r) AS ?recordsWithDL) (SAMPLE(?dl) AS ?example)
-WHERE { ?r kd:recordStatus "active" ; kd:limitationDataset ?dl ; kd:usesDataset ?d . ?d rdfs:label ?dataset }
-GROUP BY ?dataset ORDER BY DESC(?recordsWithDL) LIMIT 15'''),
+ 'cq3': ('Which datasets have author-reported dataset limitations (DL), and how many records report one? (DL is recorded per record: it is attributable to the dataset only when the record names that dataset alone; in grouped records it may concern another dataset of the record.)', '''
+SELECT ?dataset (SUM(IF(?n = 1, 1, 0)) AS ?attributableRecords) (SUM(IF(?n > 1, 1, 0)) AS ?groupedRecords)
+       (MAX(IF(?n = 1, ?dl, "")) AS ?exampleAttributable)
+WHERE { ?r kd:recordStatus "active" ; kd:limitationDataset ?dl ; kd:usesDataset ?d . ?d rdfs:label ?dataset .
+        { SELECT ?r (COUNT(DISTINCT ?x) AS ?n) WHERE { ?r kd:usesDataset ?x } GROUP BY ?r } }
+GROUP BY ?dataset ORDER BY DESC(?attributableRecords) DESC(?groupedRecords) LIMIT 15'''),
  'cq4': ('Which dataset uses do not report a version, per research category?', '''
 SELECT ?category (SUM(IF(?vs = "version not stated", 1, 0)) AS ?notStated) (COUNT(?r) AS ?records)
 WHERE { ?r kd:recordStatus "active" ; kd:versionStatus ?vs ; kd:researchCategory ?c . ?c skos:prefLabel ?category }
